@@ -4,5 +4,74 @@
     padding: 0;
 }
 body{
-    background-color: rgb(146, 145, 145);
+    height: 100vh;
+    background-color: rgb(255, 240, 240);
+    padding: 5% 0;
+    font-size: 2rem;
+}
+.container{
+    margin: 0 auto;
+    height: 100%;
+    background-color: rgb(250, 250, 250);
+    padding: 1rem;
+    width: 65%;
+    box-shadow: 1rem 1rem 5rem rgba(0, 0, 0, 0.3);
+    display: grid;
+    grid-template-columns: 1fr repeat(4, 3rem);
+    overflow: hidden;
+}
+.slider{
+    background-color: rgb(0, 0, 0);
+    border-radius: 1%;
+    width: 100%;
+    overflow: hidden;
+    grid-column-start: 1;
+    grid-column-end: 6;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+.text-container{
+    width: 150%;
+    overflow: hidden;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+.text-slider{
+    display: flex;
+    object-fit: cover;
+}
+#slide1:checked ~ .text-container>.text-slider>.text:first-child{
+    margin-left: 0;
+}
+
+input{
+    display: none;
+}
+#slide1+label{
+    grid-column-start: 2;
+}
+label{
+    z-index: 1;
+    content: '';
+    display: block;
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+    background-color: rgb(249, 249, 249);
+}
+label::after{
+    content: '';
+    display: block;
+    width: 1rem;
+    height: 1rem;
+    cursor: pointer;
+    border-radius: 50%;
+    background-color: rgb(235, 194, 255);
+    margin: 0.5rem auto;
+    
+}
+label:hover::after{
+    background-color: rgb(220, 255, 177);
 }
