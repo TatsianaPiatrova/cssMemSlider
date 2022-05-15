@@ -13,7 +13,7 @@ body{
 .container{
     margin: 0 auto;
     background-color: rgb(250, 250, 250);
-    padding: 1rem;
+    border: 2rem solid rgb(255, 255, 255);
     width: 65%;
     height: 80%;
     box-shadow: 1rem 1rem 5rem rgba(0, 0, 0, 0.3);
@@ -33,14 +33,14 @@ body{
     grid-row-end: 2;
 }
 .slide{
-    width: 20%;
+    width: 33%;
     height: 100%;
     transition: 0.5s ease;
 }
 img{
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
 }
 .text-container{
     overflow: hidden;
@@ -97,13 +97,13 @@ input:checked+label::after{
     margin-left: 0;
 }
 #slide2:checked ~ .slider>.slide:nth-child(1){
-    margin-left: -33%;
+    margin-left: -37%;
 }
 #slide3:checked ~ .slider>.slide:nth-child(1){
-    margin-left: -100%;
+    margin-left: -70%;
 }
 #slide4:checked ~ .slider>.slide:nth-child(1){
-    margin-left: -300%;
+    margin-left: -103%;
 }
 #slide1:checked ~ .text-container>.text-slider>.text:nth-child(1){
     margin-left: 0;
