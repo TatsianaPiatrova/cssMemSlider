@@ -23,7 +23,7 @@ body{
     overflow: hidden;
 }
 .slider{
-    background-color: #000000;
+    background-color: #ffffff;
     overflow: hidden;
     display: flex;
     width: 400%;
@@ -45,6 +45,7 @@ img{
     object-fit: scale-down;
 }
 .text-container{
+    margin-top: 2rem;
     overflow: hidden;
     width: 100%;
     grid-column-start: 1;
@@ -68,6 +69,7 @@ input{
     grid-column-start: 2;
 }
 input+label{
+    margin-top: 1rem;
     z-index: 1;
     content: '';
     display: block;
@@ -85,8 +87,7 @@ input+label{
     border-radius: 50%;
     background-color: rgb(235, 194, 255);
     margin: 0.5rem auto;
-    z-index: 1;
-    
+    z-index: 1;    
 }
 
 input+label:hover .circle{
@@ -129,6 +130,8 @@ input:checked+label:hover .circle{
     .container{
         display: grid;
         grid-template-columns: 1fr repeat(4, 3rem) 1fr;
+        margin: 0 auto;
+        max-width: 90%;
     }
     .slider{
         grid-column-start: 1;
