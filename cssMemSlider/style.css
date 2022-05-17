@@ -102,7 +102,8 @@ input+label{
     border-radius: 50%;
     background-color: rgb(235, 194, 255);
     margin: 0.5rem auto;
-    z-index: 1;    
+    z-index: 1;  
+    transition: .3s ease;  
 }
 
 input+label:hover .circle{
@@ -115,7 +116,9 @@ input:checked+label .circle{
 input:checked+label:hover .circle{
     border-color: rgb(255, 255, 255);
 }
-
+input+label:active .circle{
+    background-color: rgb(31, 28, 238);
+}
 #slide1:checked ~ .slider>.slide:nth-child(1){
     margin-left: 0;
 }
@@ -150,7 +153,7 @@ input:checked+label:hover .circle{
     }
     .slider{
         overflow: hidden;
-        width: 635%;
+        width: 600%;
         grid-column-start: 1;
         grid-column-end: 6;
         grid-row-start: 1;
